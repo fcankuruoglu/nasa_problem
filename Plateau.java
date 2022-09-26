@@ -23,14 +23,14 @@ public class Plateau {
 
     public Plateau(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter plateau's coordinates: ");
+        //System.out.println("Enter plateau's coordinates: ");
         int plateauX = scanner.nextInt();
         int plateauY = scanner.nextInt();
-        if (plateauX < 0 || plateauY < 0) {throw new InputMismatchException("Coordinates must be bigger than 0.");}
+        // Checking plateau's top right coordinates. If coordinates are smaller than zero, throws exception.
+        if (plateauX < 0 || plateauY < 0) throw new IllegalArgumentException("Top right's coordinates must be bigger than bottom left's coordinates( 0, 0 ).");
 
         setX(plateauX);
         setY(plateauY);
 
-        System.out.println("x_coord : " +getX()+ " y_coord : " +getY());
     }
 }
