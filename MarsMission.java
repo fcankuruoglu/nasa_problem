@@ -21,7 +21,6 @@ public class MarsMission {
     }
     private static void startMoving(Rover rover){
         Scanner scanner = new Scanner(System.in);
-        //System.out.println("Enter movement list: ");
 
         // Reading string from terminal and storing them char list.
         char[] controlCharList = scanner.next().toUpperCase().toCharArray();
